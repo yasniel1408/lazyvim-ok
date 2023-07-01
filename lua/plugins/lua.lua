@@ -47,16 +47,6 @@ return {
         },
       },
       setup = {
-        lua_ls = function(_, _)
-          local lsp_utils = require("base.lsp.utils")
-          lsp_utils.on_attach(function(client, buffer)
-            -- stylua: ignore
-            if client.name == "lua_ls" then
-              vim.keymap.set("n", "<leader>dX", function() require("osv").run_this() end, { buffer = buffer, desc = "OSV Run" })
-              vim.keymap.set("n", "<leader>dL", function() require("osv").launch({ port = 8086 }) end, { buffer = buffer, desc = "OSV Launch" })
-            end
-          end)
-        end,
       },
     },
   },
@@ -96,16 +86,5 @@ return {
         end,
       },
     },
-  },
-  {
-    "nvim-neotest/neotest",
-    dependencies = {
-      "nvim-neotest/neotest-plenary",
-    },
-    opts = function(_, opts)
-      vim.list_extend(opts.adapters, {
-        require("neotest-plenary"),
-      })
-    end,
   },
 }
