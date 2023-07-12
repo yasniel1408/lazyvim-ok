@@ -97,7 +97,7 @@ return {
           filter = function(buf)
             return vim.b[buf].neo_tree_source == "filesystem"
           end,
-          size = { height = 0.6, width = 0.2 },
+          size = { height = 0.8, width = 0.2 },
         },
         {
           title = "Neo-Tree Git",
@@ -107,14 +107,14 @@ return {
           end,
           pinned = true,
           open = "Neotree position=right git_status",
-          size = { height = 0.2 },
+          size = { height = 0.1 },
         },
-        {
-          ft = "Outline",
-          pinned = true,
-          open = "SymbolsOutline",
-          size = { height = 0.2 },
-        },
+        -- {
+        --   ft = "Outline",
+        --   pinned = true,
+        --   open = "SymbolsOutline",
+        --   size = { height = 0.1 },
+        -- },
         "neo-tree",
       },
     },
