@@ -107,7 +107,7 @@ return {
           end,
           pinned = true,
           open = "Neotree position=right git_status",
-          size = { height = 0.1 },
+          size = { height = 0.2 },
         },
         -- {
         --   ft = "Outline",
