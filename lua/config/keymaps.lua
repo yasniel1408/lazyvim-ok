@@ -19,6 +19,14 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- http request
+map(
+  "n",
+  "<leader>hh",
+  "<cmd>lua require('rest-nvim').run()<cr>",
+  { noremap = true, desc = "Send current line or selection as a http request" }
+)
+
 -- better up/down
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
