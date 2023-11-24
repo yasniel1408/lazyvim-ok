@@ -21,7 +21,7 @@ return {
             dapui.open({})
           end
           dap.listeners.before.event_terminated["dapui_config"] = function()
-            dapui.close({})
+            dapui.close({})          end
           end
           dap.listeners.before.event_exited["dapui_config"] = function()
             dapui.close({})

@@ -3,4 +3,5 @@ return {
   { "LazyVim/LazyVim", version = false },
   { "yanick/nvim-jq", version = false },
   { "uga-rosa/ccc.nvim" },
+  { "NTBBloodbath/rest.nvim", require = { "nvim-lua/plenary.nvim" } },
 }
