@@ -19,6 +19,14 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- dbui
+map("n", "<leader>db", "<cmd>DBUIToggle<cr>", { desc = "Open DBUI" })
+map("n", "<leader>dc", "<cmd>DBUIAddConnection<cr>", { desc = "Add DBUI connection" })
+map("n", "<leader>df", "<cmd>DBUIFindBuffer<cr>", { desc = "Find DBUI buffer" })
+map("n", "<leader>ds", "<cmd>DBUISaveQuery<cr>", { desc = "Save DBUI query" })
+map("n", "<leader>dn", "<cmd>DBUINext<cr>", { desc = "Next DBUI buffer" })
+map("n", "<leader>dp", "<cmd>DBUIPrev<cr>", { desc = "Previous DBUI buffer" })
+
 -- http request
 map(
   "n",
