@@ -19,6 +19,9 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
+-- image preview
+map("n", "<leader>pi", "<cmd>lua require('image_preview').PreviewImage()<cr>", { desc = "Image preview" })
+
 -- dbui
 map("n", "<leader>db", "<cmd>DBUIToggle<cr>", { desc = "Open DBUI" })
 map("n", "<leader>dc", "<cmd>DBUIAddConnection<cr>", { desc = "Add DBUI connection" })

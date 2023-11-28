@@ -4,10 +4,11 @@ return {
     requires = {
       "tpope/vim-dadbob",
       "tpope/vim-dotenv",
+      "kristijanhusak/vim-packager",
     },
     dependencies = {
       { "tpope/vim-dadbod", lazy = true },
-      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql", "psql", "postgresql" }, lazy = true },
     },
     cmd = {
       "DBUI",
@@ -59,6 +60,32 @@ return {
         add_connection = "",
         connection_ok = "✓",
         connection_error = "✕",
+      }
+
+      -- vim.g.dbs = {
+      --   { name = "dev", url = "postgres://usr_coas_dev:#k{c!%AV?53aQG?[@localhost:5432/cmpc-pulp-cl-backend-ms-coas" },
+      -- }
+
+      local function urlencode(str)
+        local function tohex(char)
+          return string.format("%%%02X", string.byte(char))
+        end
+        return string.gsub(str, "[^a-zA-Z0-9_]", tohex)
+      end
+
+      vim.g.dbs = {
+        {
+          name = "dev-coas",
+          url = "postgres://usr_coas_dev:"
+            .. urlencode("#k{c!%AV?53aQG?[")
+            .. "@localhost:5432/cmpc-pulp-cl-backend-ms-coas",
+        },
+        {
+          name = "dev-auth",
+          url = "postgres://usr_auth_z_dev:"
+            .. urlencode(">_eH!44{BaiST7Lh")
+            .. "@localhost:5432/cmpc-pulp-cl-backend-ms-auth-z",
+        },
       }
 
       -- opening it in a new tab

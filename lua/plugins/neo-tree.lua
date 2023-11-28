@@ -2,6 +2,21 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     cmd = "Neotree",
+    filesystem = {
+      window = {
+        mappings = {
+          ["<leader>pi"] = "image_wezterm", -- " or another map
+        },
+      },
+      commands = {
+        image_wezterm = function(state)
+          local node = state.tree:get_node()
+          if node.type == "file" then
+            require("image_preview").PreviewImage(node.path)
+          end
+        end,
+      },
+    },
     keys = {
       {
         "<leader>fe",
