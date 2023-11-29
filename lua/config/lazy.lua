@@ -20,6 +20,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.coding.copilot" },
+    { import = "lazyvim.plugins.extras.dap.core" },
     -- import/override with your plugins
     { import = "plugins" },
   },
@@ -39,14 +40,14 @@ require("lazy").setup({
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
-        "gzip",
+        --"gzip",
         --"matchit",
         --"matchparen",
         --"netrwPlugin",
-        "tarPlugin",
-        "tohtml",
-        "tutor",
-        "zipPlugin",
+        --"tarPlugin",
+        --"tohtml",
+        --"tutor",
+        --"zipPlugin",
       },
     },
   },

@@ -19,8 +19,14 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- image preview
-map("n", "<leader>pi", "<cmd>lua require('image_preview').PreviewImage()<cr>", { desc = "Image preview" })
+-- mappings markdown preview
+map("n", "<leader>mp", "<cmd>MarkdownPreview<cr>", { desc = "Open markdown preview" })
+map("n", "<leader>mP", "<cmd>MarkdownPreviewStop<cr>", { desc = "Close markdown preview" })
+map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Toggle markdown preview" })
+map("n", "<leader>mr", "<cmd>MarkdownPreviewRefresh<cr>", { desc = "Refresh markdown preview" })
+map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<cr><cmd>MarkdownPreview<cr>", { desc = "Restart markdown preview" })
+map("n", "<leader>mm", "<cmd>MarkdownPreviewMaximize<cr>", { desc = "Maximize markdown preview" })
+map("n", "<leader>mc", "<cmd>MarkdownPreviewCenter<cr>", { desc = "Center markdown preview" })
 
 -- dbui
 map("n", "<leader>db", "<cmd>DBUIToggle<cr>", { desc = "Open DBUI" })

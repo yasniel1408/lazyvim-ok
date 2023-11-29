@@ -31,6 +31,9 @@ return {
         "prisma",
         "python",
         "go",
+        "gomod",
+        "gowork",
+        "gosum",
         "scss",
         "sql",
         "dockerfile",
@@ -49,6 +52,9 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
+        "json",
+        "json5",
+        "jsonc",
       })
     end,
   },
